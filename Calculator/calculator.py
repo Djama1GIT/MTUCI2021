@@ -38,6 +38,8 @@ class Calculator(QWidget):
                 self.input.setText(str(num))
         except:
             return
+
+
     def __init__(self):
         super(Calculator, self).__init__()
         self.vbox = QVBoxLayout(self)
