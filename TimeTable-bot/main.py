@@ -66,9 +66,10 @@ def start_message(message):
                                       '/week - узнать какая сейчас неделя\n'
                                       'Чтобы узнать расписание, нажимайте на кнопки на вашем экране.')
 
+
 @bot.message_handler(content_types=['text'])
 def answer(message):
-    nt=(int((time.time()//1-1630443600)/3600/24/7)+2)
+    nt=(int((time.time()//1-1630270800)/3600/24/7)+1)
     ntt=1
     nttt=2
     if nt%2==0:
