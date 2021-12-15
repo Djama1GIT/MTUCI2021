@@ -1248,8 +1248,8 @@ def start(message):
 
 
 @bot.message_handler(commands=['week'])
-def start(message):
-    nt=int((time.time()//1-1630443600)/3600/24/7)+2
+def week(message):
+    nt=int((time.time()//1-1630270800)/3600/24/7)+1
     ntt = ""
     if nt % 2 == 0:
         ntt = "Нижняя неделя"
@@ -1258,12 +1258,12 @@ def start(message):
     bot.send_message(message.chat.id, f"{ntt} №{nt}")
 
 @bot.message_handler(commands=['mtuci'])
-def start(message):
+def mtuci(message):
     bot.send_message(message.chat.id, "Официальный сайт МТУСИ – https://mtuci.ru/")
 
 
 @bot.message_handler(commands=['help'])
-def start_message(message):
+def help(message):
     bot.send_message(message.chat.id, 'Здравствуйте! Я - бот, отображающий расписание группы БВТ2107. Вот список моих команд:\n'
                                       '/help - информация о боте\n'
                                       '/mtuci - ссылка на официальный сайт МТУСИ\n'

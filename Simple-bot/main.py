@@ -14,7 +14,7 @@ def start(message):
 
 
 @bot.message_handler(commands=['help'])
-def start_message(message):
+def help(message):
     bot.send_message(message.chat.id, 'Я умею много чего.\n'
                                       'Список команд:\n'
                                       '/start - Начать диалог\n'
@@ -25,17 +25,17 @@ def start_message(message):
 
 
 @bot.message_handler(commands=['randomnumb'])
-def start_message(message):
+def randomnumb(message):
     bot.send_message(message.chat.id, random.randint(0,1000))
 
 
 @bot.message_handler(commands=['search'])
-def start_message(message):
+def seacrh(message):
     bot.send_message(message.chat.id, 'Ищу.... Ищу....... ничего не нашел( Попробуй https://google.com/')
 
 
 @bot.message_handler(commands=['whoami'])
-def start_message(message):
+def whoami(message):
     bot.send_message(message.chat.id, "i don't know")
 
 

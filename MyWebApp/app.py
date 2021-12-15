@@ -25,7 +25,6 @@ def login():
             password = request.form.get('password')
             cursor.execute("SELECT * FROM service.users WHERE login=%s AND password=%s", (str(username), str(password)))
             records = list(cursor.fetchall())
-
             try:
                 return render_template('account.html', full_name=records[0][1], login=records[0][2], password=records[0][3])
             except:
@@ -52,6 +51,7 @@ def registration():
             cursor.execute('INSERT INTO service.users (full_name, login, password) VALUES (%s, %s, %s);',
                        (str(name), str(login), str(password)))
             conn.commit()
+
             return redirect('/login/')
 
     return render_template('registration.html')
